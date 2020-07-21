@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shana Solutions</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./css/shananav.css">
+  <link rel="stylesheet" type="text/css" href="./css/fab.css">
+  <link rel="stylesheet" type="text/css" href="./css/footer.css">
+  <script type="text/javascript" src="./js/modal.js"></script>
+
+  <!--Top movement ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--fab -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--fab-->
+</head>
+<style>
+html{
+   scroll-behavior: smooth;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #7BA8F2;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.modal-header{
+	max-height: 50px;
+}
+.modal-footer{
+	max-height: 50px;
+}
+</style>
+<body id="page-top" oncontextmenu="return trued;">
+
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header page-scroll">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#shana_navbar">
+		 			<span class="sr-only">Toggle Navigation</span>
+		 			<span class="icon-bar"></span>
+		 			<span class="icon-bar"></span>
+		 			<span class="icon-bar"></span>
+		 		</button>
+			<a class="navbar-brand" href="#page-top"><img src="./img/shanas.png" class="img-responsive logo"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="shana_navbar">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="hidden">
+				<a href="#page-top"></a>
+			</li>
+			<li><a class="active" href="index.html">Home</a></li>
+			<li><a class="page-scroll" href="#services">Services</a></li>
+			<li><a class="page-scroll" href="#team">Our Team</a></li>
+			<li><a class="page-scroll" href="#feed">Contact</a></li>
+		<!--	<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					
+					<li role="separator" class="divider"></li>
+					<li><a href="#">New Link</a></li>
+
+				</ul>
+			</li>-->
+			
+		</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!--Random images scrolling -->
+<div class="randomimg"> 	
+    <img src="https://source.unsplash.com/720x600/?developer">
+</div>
+<br>
+
+<!--(Services Section) -->
+<section id="services" class="container text-center">
+  <div class="text-center">
+      <h5 class="text-primary font-weight-bold">We Are Computerists</h5>
+      <h2 class="font-weight-bold">Services</h2>
+      <h4 class="text-weight-bold">Work done for various requirements at appropriate price.</h4>
+  </div>
+  <br>
+  <div class="row">
+  	<div class="col-sm-6 col-md-6 col-lg-3">
+  		<h4 class="lead">Freelancing</h4>
+  		<p class="text-center text-muted">We develop websites of your choice.</p>
+  		<a href="#modal1" style="text-decoration: none;" data-toggle="modal" data-target="#modal1">Learn more<svg width="1em" height="1em" viewBox="0 -3 16 16" class="bi bi-arrow-right" fill="#0275d8" xmlns="http://www.w3.org/2000/svg">
+  			<path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+  			<path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/></svg>
+  		</a>
+  		<!--modal1 starts-->
+  		<div class="modal fade" id="modal1" role="dialog">
+			<div class="modal-dialog">
+				<!--modal content-->
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-left">Freelancing</h4>
+					</div>
+					<div class="modal-body">
+						<section class="text-gray-700 body-font">
+							<img class="img-responsive center-block" src="./img/freelancer.jpg">
+							<br>
+							<div class="row">
+              						<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+              							<div><img src="./img/anand.jpg" alt="" class="center-block img-responsive img-circle"></div>
+                						<div style="height: 10px"></div>
+                						<p class="title mb-0">Anand</p>
+                						<p class="text-muted " style="font-size: 13px">Freelancer</p>
+              						</div>
+
+              						<div class="col-sm-8 col-md-8 col-lg-8 text-center text-justify">
+              							<br>
+                						<p>On demand projects are accomplished. Any web and android projects will be developed. </p>
+                						<p class="card-text">
+                  						<strong>No compromise for your requisites. You will get your desired projects for sure.</strong>
+                						</p>
+              						</div>	
+            				</div>
+						</section>
+					</div>
+					<div class="modal-footer bg-primary">
+						<p style="color: #ffff" class="text-left">Shana Solutions| Freelancer</p>
+					</div>
+				</div><!--modal content ends-->
+			</div><!--modal dialog ends-->
+			
+		</div>
+		<!--modal1 ends-->	
+  	</div>
+
+  	<div class="col-sm-6 col-md-6 col-lg-3">
+  		<h4 class="lead">Consultancy</h4>
+  		<p class="text-center text-muted">Project development for Computer Science Students</p>
+  		<a href="#modal2" style="text-decoration: none;" data-toggle="modal" data-target="#modal2">Learn more<svg width="1em" height="1em" viewBox="0 -3 16 16" class="bi bi-arrow-right" fill="#0275d8" xmlns="http://www.w3.org/2000/svg">
+  			<path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+  			<path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/></svg>
+  		</a>
+  		<!-- The Modal2 starts-->
+		<div class="modal fade" id="modal2" role="dialog">
+			<div class="modal-dialog">
+				<!--modal content-->
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-left">Consultancy</h4>
+					</div>
+					<div class="modal-body">
+						<section class="text-gray-700 body-font">
+							<img class="img-responsive center-block" src="./img/consultancy.jpeg">
+							<br>
+							<div class="row">
+              						<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+              							<div><img src="./img/pooja1.jpg" alt="" class="center-block img-responsive img-circle"></div>
+                						<div style="height: 10px"></div>
+                						<p class="title mb-0">Pooja</p>
+                						<p class="text-muted " style="font-size: 13px">Consultant</p>
+              						</div>
+
+              						<div class="col-sm-8 col-md-8 col-lg-8 text-center text-justify">
+              							<br>
+                						<p>Pose your queries and get your appropriate suggestions. Every query will achieve you a great response. </p>
+                						<p class="card-text">
+                  						<strong>We are a few buds with variety of ideas.</strong>
+                						</p>
+              						</div>	
+            				</div>
+						</section>
+					</div>
+					<div class="modal-footer bg-primary">
+						<p style="color: #ffff" class="text-left">Shana Solutions| Consultancy</p>
+					</div>
+				</div><!--modal content ends-->
+			</div><!--modal dialog ends-->
+			
+		</div>
+		<!--modal2 ends-->
+  	</div>
+  	<div class="col-sm-6 col-md-6 col-lg-3">
+  		<h4 class="lead">Workshops</h4>
+  		<p class="text-center text-muted">We do conduct seminars and workshops on various topics. Along with seminars, hands-on practice tests are also provided.</p>
+  		<a href="#modal3" style="text-decoration: none;" data-toggle="modal" data-target="#modal3">Learn more<svg width="1em" height="1em" viewBox="0 -3 16 16" class="bi bi-arrow-right" fill="#0275d8" xmlns="http://www.w3.org/2000/svg">
+  			<path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+  			<path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/></svg>
+  		</a>
+  		<!-- The Modal3 starts-->
+		<div class="modal fade" id="modal3" role="dialog">
+			<div class="modal-dialog">
+				<!--modal content-->
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-left">Workshops</h4>
+					</div>
+					<div class="modal-body">
+						<section class="text-gray-700 body-font">
+							<img class="img-responsive center-block" src="./img/workshp.jpg">
+							<br>
+							<div class="row">
+              						<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+              							<div><img src="./img/anand.jpg" alt="" class="center-block img-responsive img-circle"></div>
+                						<div style="height: 10px"></div>
+                						<p class="title mb-0">Anand</p>
+                						<p class="text-muted " style="font-size: 13px">Speaker</p>
+              						</div>
+
+              						<div class="col-sm-8 col-md-8 col-lg-8 text-center text-justify">
+              							<br>
+                						<p>Enhance your skills by participating in our workshops. A day is well spent when there is a growth.</p>
+                						<p class="card-text">
+                  						<strong>Your growth should be your progress.</strong>
+                						</p>
+              						</div>	
+            				</div>
+						</section>
+					</div>
+					<div class="modal-footer bg-primary">
+						<p style="color: #ffff" class="text-left">Shana Solutions| Workshops </p>
+					</div>
+				</div><!--modal content ends-->
+			</div><!--modal dialog ends-->
+			
+		</div>
+		<!--modal3 ends-->
+  	</div>
+  	<div class="col-sm-6 col-md-6 col-lg-3">
+  		<h4 class="lead">Resolve issues</h4>
+  		<p class="text-center text-muted w-responsive">A work done is said when it has no issues. We also resolve any computer related issues.</p>
+  		<a style="text-decoration: none;" href="#modal4" data-toggle="modal" data-target="#modal4">Learn more<svg width="1em" height="1em" viewBox="0 -3 16 16" class="bi bi-arrow-right" fill="#0275d8" xmlns="http://www.w3.org/2000/svg">
+  			<path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+  			<path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/></svg>
+  		</a>
+  		<!-- The Modal4 starts-->
+		<div class="modal fade" id="modal4" role="dialog">
+			<div class="modal-dialog">
+				<!--modal content-->
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-left">Resolve issues</h4>
+					</div>
+					<div class="modal-body">
+						<section class="text-gray-700 body-font">
+							<img class="img-responsive center-block" src="./img/solutionist.jpg">
+							<br>
+							<div class="row">
+              						<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+              							<div><img src="./img/anand.jpg" alt="" class="center-block img-responsive img-circle"></div>
+                						<div style="height: 10px"></div>
+                						<p class="title mb-0">Anand</p>
+                						<p class="text-muted " style="font-size: 13px">Solutionist</p>
+              						</div>
+
+              						<div class="col-sm-8 col-md-8 col-lg-8 text-center text-justify">
+              							<br>
+                						<p>A computer hardware or a software concerned difficulties are sorted at ease.</p>
+                						<p class="card-text">
+                  						<strong>Every road has an end, but there is another way.</strong>
+                						</p>
+              						</div>	
+            				</div>
+						</section>
+					</div>
+					<div class="modal-footer bg-primary">
+						<p style="color: #ffff" class="text-left">Shana Solutions| Solutionist</p>
+					</div>
+				</div><!--modal content ends-->
+			</div><!--modal dialog ends-->
+			
+		</div>
+		<!--modal4 ends-->
+  	</div><!--4th div solutionist ends-->
+  </div><!--row class div ends-->
+  <br>
+</section>
+<!--service ends-->
+
+<!--our team starts-->
+<section class="container" id="team">
+	<!--heading -->
+   <div class="text-center w-responsive">
+      <h2 class="font-weight-bold">Our Pride</h2>
+      <h4 class="text-weight-bold">We treasure our team for their dedication. Everyone is significant to our development. </h4>
+  </div>
+  <br><!--description-->
+  <div class="row text-center text-md-center text-lg-center">
+  	<div class="col-md-4 col-sm-6 col-xs-6">
+  	  	<div class="team-member">
+            <div class="team-img">
+                <img src="./img/anand1.jpg" alt="team member" class="img-responsive img-circle">
+            </div>
+        </div>
+        <div class="team-title text-center">
+            <h4 class="text-weight-bold text-danger">Anand Kammar</h4>
+            <span>Founder & Developer</span>
+        </div>
+  </div>
+  
+  <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="team-member">
+            <div class="team-img">
+                <img src="./img/pooja.jpg" alt="team member" class="img-responsive img-circle" >
+            </div>
+        </div>
+        <div class="team-title text-center">
+            <h4 class="text-weight-bold text-danger">Pooja</h4>
+            <span>Developer & Designer</span>
+        </div>
+  </div>
+  
+  <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="team-member">
+            <div class="team-img">
+                <img src="./img/vishal.jpg" alt="team member" class="img-responsive img-circle">
+            </div>
+        </div>
+        <div class="team-title text-center">
+            <h4 class="text-weight-bold text-danger">Anand Kammar</h4>
+            <span>Developer</span>
+        </div>
+  </div>
+</section>
+<!--our team ends-->
+<br>
+<br>
+<!--  <h1>Floating Action Button (FAB) - Demo</h1>-->
+<div class="fab-container">
+<div class="fab fab-icon-holder">
+<i class='fas fa-comments' ></i>
+</div>
+<ul class="fab-options">
+<li>
+<span class="fab-label">Whatsapp</span>
+<div class="fab-icon-holder">
+  <i class="fa fa-whatsapp" style="font-size:36px;color: green"></i>
+  <!--<img src="https://i.imgur.com/Lxjraqc.png" aria-hidden="true">-->
+<a class="whats-app" href="https://api.whatsapp.com/send?phone=918329996079&text=Hello,%20Shana%20Solutions,%20I%20am%20happy%20to%20be%20your%20Client!!%20Please%20Share%20me%20more%20details%20on%20-%20" target="_blank"></a>
+</div>
+</li>
+<li>
+<span class="fab-label">Call us</span>
+<div class="fab-icon-holder">
+  <a href="tel:8329996079" data-rel="external"><i class="fa fa-phone" style="font-size:36px;color:#5897BD"></i></a>
+</div>
+</li>
+</ul>
+</div>
+
+<!-- start of  contact form-->
+<form>
+<div class="section" id="feed">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h2 class="section title font-weight-bold">Feedback form</h2>
+			<p class="section-description" style="font-size: 17px"> Write to Improve</p>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+			<form id="feed" method="post" class="form" role="form">
+			    <div class="row">
+			    	<div class="col-md-6 form-group">
+			    		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
+			    	</div>
+			    	<div class="col-md-6 form-group">
+			    		<input class="form-control" id="email" name="email" placeholder="Email" type="text" required />
+			    	</div>
+			    </div>
+			    <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+			    <br>
+			    <div class="row">
+			    	<div class="col-md-12 text-center form-group" >
+			    		<button class="btn btn-primary" type="submit"> Submit</button>
+			    	</div>
+			    </div>	
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</form>
+
+<!--end of contact form--> 
+<br><br>
+<!-- Start of Footer-->
+<footer class="site-footer">
+	<div class="container">
+		<div class="row">
+			<p style="text-align: center;">Shana Solutions , The Land Of Computerist  </p>
+
+		</div>
+		<div class="bottom-footer">
+			<div class="col-md-5"> Shana Solutions | © Copyright Shana 2020 </div>
+			<div class="col-md-7">
+				<ul class="footer-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#team">Our team</a></li>
+					<li><a href="#feed">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</footer>
+<!-- End of footer-->
+
+
+<!-- to scroll top-->
+<a id="myBtn" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+
+
+<script type="text/javascript">
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

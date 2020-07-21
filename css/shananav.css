@@ -1,0 +1,49 @@
+body{
+    background-color: #ffffff;  
+  }
+
+  .navbar-brand{
+    margin:0;
+    padding: 0;
+    
+  }
+  .logo{
+    height: 100px;
+    padding-top: 5px;    
+  }
+   
+   .navbar-default{
+     height: 80px;
+     padding-top: 5px;
+     border: none;
+     background-color: #ffffff;
+     display: inline;
+     text-align: center;
+   }
+   .navbar-header{
+    height: 100px;
+    
+   }
+  .navbar-toggle{
+    position: relative;
+    top:30px !important;
+    }
+   .navbar-collapse{
+  top:30px !important;
+  position:relative;
+  font-size: 18px;
+  
+   }
+/*Navbar ends */
+
+/* imgs */
+.randomimg img{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;  
+ margin-top:60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
