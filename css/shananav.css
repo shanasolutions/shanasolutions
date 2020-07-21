@@ -8,8 +8,8 @@ body{
     
   }
   .logo{
-    height: 100px;
-    padding-top: 5px;    
+    height: auto;
+    width: 350px; 
   }
    
    .navbar-default{
@@ -27,11 +27,13 @@ body{
   .navbar-toggle{
     position: relative;
     top:30px !important;
+    border: none;
     }
    .navbar-collapse{
   top:30px !important;
   position:relative;
   font-size: 18px;
+   border: none;
   
    }
 /*Navbar ends */
