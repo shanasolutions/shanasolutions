@@ -1,7 +1,7 @@
 body{
     background-color: #ffffff;  
   }
-
+  
   .navbar-brand{
     margin:0;
     padding: 0;
@@ -9,9 +9,14 @@ body{
   }
   .logo{
     height: auto;
-    width: 350px; 
+    max-width: 310px;
+    padding-top: 10px;
+    position: absolute; 
   }
-   
+
+  .navbar{
+    margin-top: 5px;
+  } 
    .navbar-default{
      height: 80px;
      padding-top: 5px;
@@ -30,16 +35,16 @@ body{
     border: none;
     }
    .navbar-collapse{
-  top:30px !important;
-  position:relative;
-  font-size: 18px;
-   border: none;
-  
+    top:30px !important;
+    position:relative;
+    font-size: 18px;
+    border: none; 
    }
+
 /*Navbar ends */
 
 /* imgs */
-.randomimg img{
+.randoming img{
  display: block;
  margin-left: auto;
  margin-right: auto;  
