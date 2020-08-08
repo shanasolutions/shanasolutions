@@ -1,0 +1,5 @@
+#Turn Rewrite Engine On
+#RewriteEngine on
+
+#Rewrite for mali general stores
+#RewriteRule ^mali$ mali.html [NC,L]
