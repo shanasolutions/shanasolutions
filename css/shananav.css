@@ -86,6 +86,22 @@ body{
  margin-top:60px;
 }
 
+.back_div{
+  padding: 5px;
+  padding-top: 14px;
+  background-color: #eee;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.outer_div{
+  padding-bottom: 10px;
+}
+
+.gfont{
+  font-family: 'Lobster Two', cursive;
+}
+
 html {
   scroll-behavior: smooth;
 }
