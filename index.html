@@ -63,7 +63,10 @@ hr.style-two {
 }
 
 </style>
-<body id="page-top" oncontextmenu="return trued;">
+<body id="page-top" oncontextmenu="return trued;" onload="myFunction()">
+
+  <div id="loading">
+  </div>
 
 
 <nav class="navbar navbar-default" role="navigation">
@@ -543,6 +546,12 @@ function topFunction() {
       offset:130,
       duration: 1500
     });
+  </script>
+  <script>
+    var preloader=document.getElementById('loading');
+    function myFunction() {
+      preloader.style.display = 'none';
+    }
   </script>
 </body>
 </html>
