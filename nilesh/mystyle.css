@@ -287,6 +287,15 @@ p{
 /*End of Projects section*/
 
 
+/*About section*/
+
+#about .about{
+	flex-direction: column-reverse;
+}
+
+/*End of About section*/
+
+
 /* Keyframes */
 @keyframes text_reveal_box{
 	50%{
