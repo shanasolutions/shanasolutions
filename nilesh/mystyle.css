@@ -179,8 +179,10 @@ p {
 }
 
 #services .service-header {
-	width: 450px;
+	width: 100%;
+	max-width: 450px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 
@@ -406,7 +408,10 @@ p {
 
 
 #contact .contact-items {
-	width: 400px;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 #contact .contact-item {
