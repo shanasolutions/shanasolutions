@@ -8,7 +8,7 @@
 
 html {
 	font-size: 10px;
-	font-family: 'Lato:ital', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -31,19 +31,17 @@ img {
 }
 
 p {
-	color: black;
-	font-size: 1.4rem;
+	color: #333333;
+	font-size: 1.5rem;
 	margin-top: 5px;
-	line-height: 2.5rem;
-	/*font-weight: 300;*/
-	letter-spacing: 0.05rem;
-
+	line-height: 2.6rem;
+	letter-spacing: 0.03rem;
 }
 
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
+	color: #29323c;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -253,6 +251,122 @@ p {
 /*End of Services section*/
 
 
+/*Coordination section*/
+
+#coordination {
+	background-color: #f9fafb;
+}
+
+#coordination .coordination {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#coordination .coordination-header {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+}
+
+#coordination .coordination-header p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+
+#coordination .coordination-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 50px;
+	width: 100%;
+	padding: 0 20px;
+}
+
+#coordination .coordination-item {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 40px 30px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+	margin: 20px 0;
+	position: relative;
+	border-top: 4px solid crimson;
+	transition: 0.3s ease transform, 0.3s ease box-shadow;
+}
+
+#coordination .coordination-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+#coordination .coordination-item .icon {
+	height: 60px;
+	width: 60px;
+	margin-bottom: 20px;
+	background-color: rgba(220, 20, 60, 0.08);
+	border-radius: 50%;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#coordination .coordination-item .icon img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#coordination .coordination-item h2 {
+	font-size: 2.2rem;
+	color: #29323c;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+#coordination .coordination-item ul {
+	list-style: none;
+	width: 100%;
+	text-align: left;
+}
+
+#coordination .coordination-item ul li {
+	font-size: 1.4rem;
+	color: #485563;
+	margin-top: 10px;
+	line-height: 2.2rem;
+	letter-spacing: 0.05rem;
+	position: relative;
+	padding-left: 25px;
+}
+
+#coordination .coordination-item ul li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: crimson;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+/*End of Coordination section*/
+
+
 /*Projects section*/
 #projects .projects {
 	flex-direction: column;
@@ -368,6 +482,53 @@ p {
 
 #about .column-right p {
 	margin-bottom: 20px;
+}
+
+#about .column-right .about-lead {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #29323c;
+	margin-bottom: 25px;
+	line-height: 2.8rem;
+}
+
+#about .about-info-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+#about .about-info-item {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	border-left: 3px solid crimson;
+	padding-left: 15px;
+}
+
+#about .info-label {
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	color: crimson;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+
+#about .info-value {
+	font-size: 1.5rem;
+	color: #485563;
+	line-height: 2.2rem;
+}
+
+#about .info-value .highlight {
+	color: #29323c;
+	font-weight: 700;
+	background-color: rgba(220, 20, 60, 0.08);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 1.3rem;
 }
 
 #about .column-right .cta {
@@ -797,6 +958,20 @@ p {
 
 	/* End of Service */
 
+	/* Coordination */
+	#coordination .coordination-details {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-between;
+		gap: 30px;
+	}
+
+	#coordination .coordination-item {
+		flex-basis: 48%;
+		margin: 0;
+	}
+
+	/* End of Coordination */
 
 	/* Projects */
 	#projects .project-item {
@@ -855,6 +1030,20 @@ p {
 
 	#about .column-right h1 {
 		text-align: left;
+	}
+
+	#about .about-info-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	#about .about-info-item {
+		margin-bottom: 0;
+	}
+
+	#about .about-info-item:first-child {
+		grid-column: span 2;
 	}
 
 	/* End of About */
