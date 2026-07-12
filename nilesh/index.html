@@ -22,6 +22,15 @@
 					</a>
 				</div>
 				<div class="nav-list">
+					<span class="menu-trigger-label" aria-label="Open Menu">
+						<svg class="menu-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="3" width="7" height="7"></rect>
+							<rect x="14" y="3" width="7" height="7"></rect>
+							<rect x="14" y="14" width="7" height="7"></rect>
+							<rect x="3" y="14" width="7" height="7"></rect>
+						</svg>
+					</span>
 					<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
 						<svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -44,11 +53,16 @@
 						<div class="bar"></div>
 					</div>
 					<ul>
+						<canvas id="menu-particle-canvas"></canvas>
 						<li><a href="#main" data-after="Home">Home</a></li>
-						<li><a href="#services" data-after="Services">Our Products</a></li>
+						<li><a href="#services" data-after="Products">Products</a></li>
 						<li><a href="#coordination" data-after="Planning">Planning</a></li>
 						<li><a href="#installation" data-after="Installation">Installation</a></li>
 						<li><a href="#projects" data-after="Projects">Projects</a></li>
+						<li><a href="#exterior-lighting" data-after="Lighting">Lighting</a></li>
+						<li><a href="#solar" data-after="Solar">Solar</a></li>
+						<li><a href="#clients" data-after="Clients">Clients</a></li>
+						<li><a href="#commitment" data-after="Commitment">Commitment</a></li>
 						<li><a href="#about" data-after="About">About</a></li>
 						<li><a href="#workforce" data-after="Workforce">Workforce</a></li>
 						<li><a href="#contact" data-after="Contact">Contact</a></li>
@@ -312,6 +326,244 @@
 
 	<!--End of Projects section-->
 
+	<!--Exterior Lighting Section-->
+	<section id="exterior-lighting">
+		<div class="exterior-lighting container">
+			<div class="lighting-wrapper">
+				<div class="lighting-left">
+					<h1 class="section-title">Street Light Pole & <span>Gate Light Fixing</span></h1>
+					<p class="lighting-sub">Durable exterior lighting to boost security, safety and accessibility.</p>
+					<div class="outcome-card">
+						<div class="outcome-icon">
+							<img width="30" height="30" src="https://img.icons8.com/ios/50/checked.png" alt="outcome" />
+						</div>
+						<div class="outcome-text">
+							<span>Outcome</span>
+							<h3>Improved operational safety, security, and accessibility.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="lighting-right">
+					<div class="lighting-features">
+						<div class="lighting-feature">
+							<div class="feature-num">01</div>
+							<div class="feature-info">
+								<h3>Perimeter Visibility</h3>
+								<p>Professional installation of streetlight poles to significantly improve perimeter
+									visibility.</p>
+							</div>
+						</div>
+						<div class="lighting-feature">
+							<div class="feature-num">02</div>
+							<div class="feature-info">
+								<h3>Safer Access Points</h3>
+								<p>Gate lighting fixtures designed for safer access during lowlight or nighttime
+									operations.</p>
+							</div>
+						</div>
+						<div class="lighting-feature">
+							<div class="feature-num">03</div>
+							<div class="feature-info">
+								<h3>Durable Techniques</h3>
+								<p>Use of top-quality fixtures and precise mounting techniques to ensure long-term
+									durability against weathering.</p>
+							</div>
+						</div>
+						<div class="lighting-feature">
+							<div class="feature-num">04</div>
+							<div class="feature-info">
+								<h3>Industrial Grade</h3>
+								<p>Lighting solutions specifically tailored for industrial facilities, warehouses, and
+									commercial spaces.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of Exterior Lighting Section-->
+
+	<!--Solar Section-->
+	<section id="solar">
+		<div class="solar container">
+			<div class="solar-header">
+				<h1 class="section-title">Solar <span>Work</span></h1>
+				<p>Voltech Solution’s renewable electrical installations driving efficiency and sustainability</p>
+			</div>
+			<div class="solar-details">
+				<div class="solar-grid">
+					<div class="solar-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/sun.png"
+								alt="solar-integration" />
+						</div>
+						<h2>Renewable Integration</h2>
+						<p>Demonstrates Voltech's expansion into state-of-the-art renewable energy integration.</p>
+					</div>
+					<div class="solar-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/electronics.png"
+								alt="modern-solutions" />
+						</div>
+						<h2>Modern Solutions</h2>
+						<p>Reflects Voltech's technical capabilities in delivering modern electrical infrastructure.</p>
+					</div>
+					<div class="solar-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/electricity.png"
+								alt="dependency" />
+						</div>
+						<h2>Energy Autonomy</h2>
+						<p>Significantly reduces dependency on non-renewable power sources for a cleaner future.</p>
+					</div>
+					<div class="solar-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/leaf.png" alt="efficiency" />
+						</div>
+						<h2>Environmental Care</h2>
+						<p>Actively supports energy efficiency and positive environmental responsibility.</p>
+					</div>
+					<div class="solar-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/coins.png" alt="savings" />
+						</div>
+						<h2>Operational Savings</h2>
+						<p>Substantially lowers daily operational costs through intelligent solar energy savings.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of Solar Section-->
+
+	<!--Clients Section-->
+	<section id="clients">
+		<div class="clients container">
+			<div class="clients-header">
+				<h1 class="section-title">Client <span>Sectors</span></h1>
+				<p>Representative clients across diverse industrial & commercial domains</p>
+			</div>
+			<div class="clients-details">
+				<div class="clients-grid">
+					<div class="client-sector-card">
+						<div class="sector-icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/delivery.png"
+								alt="logistics" />
+						</div>
+						<h2>E-commerce & Logistics</h2>
+						<div class="client-tags">
+							<span class="client-tag">Amazon Warehouse (Chakan)</span>
+							<span class="client-tag">Indospace Warehouse</span>
+							<span class="client-tag">Indian Oil Warehouse <span class="badge">ongoing</span></span>
+							<span class="client-tag">Avenva project Pvt Ltd</span>
+						</div>
+					</div>
+					<div class="client-sector-card">
+						<div class="sector-icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/car.png" alt="automobile" />
+						</div>
+						<h2>Automobile</h2>
+						<div class="client-tags">
+							<span class="client-tag">Faurecia Automotive Seating India</span>
+							<span class="client-tag">Mahindra CIE</span>
+							<span class="client-tag">ST Lamitech Pvt LTD</span>
+							<span class="client-tag">SIAC SKH Cabs MFG Pvt Ltd</span>
+						</div>
+					</div>
+					<div class="client-sector-card">
+						<div class="sector-icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/settings.png"
+								alt="tooling" />
+						</div>
+						<h2>Tooling & Moulds</h2>
+						<div class="client-tags">
+							<span class="client-tag">Swati Mold and Dies Pvt Ltd <span
+									class="badge">ongoing</span></span>
+							<span class="client-tag">Vishwakarma Assemblies</span>
+						</div>
+					</div>
+					<div class="client-sector-card">
+						<div class="sector-icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/sprout.png"
+								alt="agriculture" />
+						</div>
+						<h2>Agriculture & Materials</h2>
+						<div class="client-tags">
+							<span class="client-tag">Rahee Seeds Pvt Ltd</span>
+							<span class="client-tag">SFC Environmental Ltd</span>
+						</div>
+					</div>
+					<div class="client-sector-card full-width">
+						<div class="sector-icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/engineering.png"
+								alt="engineering" />
+						</div>
+						<h2>Projects & Engineering</h2>
+						<p>Voltech capability to manage large-scale, varied technical needs with customized engineering
+							solutions and robust electrical execution.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of Clients Section-->
+
+	<!--Commitment Section-->
+	<section id="commitment">
+		<div class="commitment container">
+			<div class="commitment-header">
+				<h1 class="section-title">Commitment to <span>Quality, Safety & Reliability</span></h1>
+				<p>Voltech Solution — dependable electrification for industrial & commercial projects</p>
+			</div>
+			<div class="commitment-details">
+				<div class="commitment-grid">
+					<div class="commitment-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/shield.png" alt="safety" />
+						</div>
+						<h2>Stringent Safety Standards</h2>
+						<p>Rigorous adherence to the highest safety guidelines for critical electrical installations.
+						</p>
+					</div>
+					<div class="commitment-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/clock.png" alt="delivery" />
+						</div>
+						<h2>On-Time Delivery</h2>
+						<p>Strict adherence to project timelines and milestones to ensure zero operational delay.</p>
+					</div>
+					<div class="commitment-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/handshake.png"
+								alt="satisfaction" />
+						</div>
+						<h2>Customer Satisfaction</h2>
+						<p>Fostering long-term client relationships built on transparent and top-quality service.</p>
+					</div>
+					<div class="commitment-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/idea.png" alt="innovation" />
+						</div>
+						<h2>Reliability & Innovation</h2>
+						<p>Driving trustworthy partnerships backed by innovative tech execution and consistent support.
+						</p>
+					</div>
+					<div class="commitment-card">
+						<div class="icon">
+							<img width="40" height="40" src="https://img.icons8.com/ios/50/ok--v1.png"
+								alt="compliance" />
+						</div>
+						<h2>Compliance & Regulations</h2>
+						<p>Ensuring absolute operational safety and strict compliance with evolving state and national
+							regulations.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of Commitment Section-->
+
 
 	<!--About section-->
 	<section id="about">
@@ -413,13 +665,15 @@
 			<div class="contact-wrapper">
 				<div class="contact-left">
 					<h1 class="section-title">Contact <span>Info</span></h1>
-					<p class="contact-sub">Have a project in mind or need expert electrical contracting? Reach out to us and our team will get back to you promptly.</p>
+					<p class="contact-sub">Have a project in mind or need expert electrical contracting? Reach out to us
+						and our team will get back to you promptly.</p>
 				</div>
 				<div class="contact-right">
 					<div class="contact-card">
 						<div class="contact-row">
 							<div class="icon">
-								<img width="30" height="30" src="https://img.icons8.com/ios/50/apple-phone.png" alt="phone" />
+								<img width="30" height="30" src="https://img.icons8.com/ios/50/apple-phone.png"
+									alt="phone" />
 							</div>
 							<div class="info">
 								<span class="label">Phone</span>
@@ -428,7 +682,8 @@
 						</div>
 						<div class="contact-row">
 							<div class="icon">
-								<img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/new-post--v1.png" alt="email" />
+								<img width="30" height="30"
+									src="https://img.icons8.com/pastel-glyph/64/new-post--v1.png" alt="email" />
 							</div>
 							<div class="info">
 								<span class="label">Email</span>
@@ -437,11 +692,13 @@
 						</div>
 						<div class="contact-row">
 							<div class="icon">
-								<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/address--v1.png" alt="address" />
+								<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/address--v1.png"
+									alt="address" />
 							</div>
 							<div class="info">
 								<span class="label">Address</span>
-								<span class="val">3rd Floor, NMK Creation, Near Narmada Garden, Pimple-Gurav, Pune 411061</span>
+								<span class="val">3rd Floor, NMK Creation, Near Narmada Garden, Pimple-Gurav, Pune
+									411061</span>
 							</div>
 						</div>
 					</div>
@@ -629,6 +886,158 @@
 			requestAnimationFrame(animateParticles);
 		}
 		animateParticles();
+
+		// Menu Oscilloscope & Spark Grid Animation
+		const menuCanvas = document.getElementById('menu-particle-canvas');
+		const mctx = menuCanvas.getContext('2d');
+		let menuActive = false;
+		let waveOffset = 0;
+
+		function resizeMenuCanvas() {
+			const ul = menuCanvas.parentElement;
+			menuCanvas.width = ul.clientWidth;
+			menuCanvas.height = ul.clientHeight;
+		}
+
+		// Watch hover state of menu button & dropdown to only animate when active
+		const menuTrigger = document.querySelector('.menu-trigger-label');
+		const menuDropdown = document.querySelector('.nav-list ul');
+		
+		menuTrigger.addEventListener('mouseenter', () => { menuActive = true; });
+		menuTrigger.addEventListener('mouseleave', () => {
+			setTimeout(() => {
+				if (!menuDropdown.matches(':hover') && !menuTrigger.matches(':hover')) {
+					menuActive = false;
+				}
+			}, 100);
+		});
+
+		menuDropdown.addEventListener('mouseenter', () => { menuActive = true; });
+		menuDropdown.addEventListener('mouseleave', () => {
+			setTimeout(() => {
+				if (!menuTrigger.matches(':hover') && !menuDropdown.matches(':hover')) {
+					menuActive = false;
+				}
+			}, 100);
+		});
+		
+		// Also support mobile menu active state
+		const mobileMenu = document.querySelector('.nav-list ul');
+		const observer = new MutationObserver(() => {
+			if (mobileMenu.classList.contains('active')) {
+				menuActive = true;
+				resizeMenuCanvas();
+			} else {
+				menuActive = false;
+			}
+		});
+		observer.observe(mobileMenu, { attributes: true, attributeFilter: ['class'] });
+
+		window.addEventListener('resize', () => {
+			if (menuActive) resizeMenuCanvas();
+		});
+		resizeMenuCanvas();
+
+		// Horizontal glowing charge spark array
+		let menuSparks = [];
+		class MenuSpark {
+			constructor() {
+				this.reset();
+			}
+			reset() {
+				this.x = 0;
+				this.y = Math.random() * menuCanvas.height;
+				this.vx = Math.random() * 4 + 2; // travel horizontally
+				this.size = Math.random() * 1.5 + 1;
+				this.alpha = Math.random() * 0.5 + 0.5;
+			}
+			update() {
+				this.x += this.vx;
+				if (this.x > menuCanvas.width) {
+					this.reset();
+				}
+			}
+			draw() {
+				const isLight = document.body.classList.contains('light-theme');
+				mctx.beginPath();
+				mctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+				mctx.fillStyle = isLight ? `rgba(0, 132, 255, ${this.alpha})` : `rgba(220, 20, 60, ${this.alpha * 1.5})`;
+				mctx.fill();
+			}
+		}
+
+		// Initialize sparks
+		for(let i=0; i<15; i++) {
+			let s = new MenuSpark();
+			s.x = Math.random() * window.innerWidth;
+			menuSparks.push(s);
+		}
+
+		function drawOscilloscopeWave(amplitude, frequency, offset, color, lineWidth) {
+			mctx.beginPath();
+			mctx.lineWidth = lineWidth;
+			mctx.strokeStyle = color;
+			mctx.shadowBlur = 8;
+			mctx.shadowColor = color;
+			
+			const centerY = menuCanvas.height / 2;
+			for (let x = 0; x < menuCanvas.width; x++) {
+				// Sine wave formula with noise/jitter for electric hum look
+				const jitter = (Math.random() - 0.5) * (amplitude * 0.1);
+				const y = centerY + Math.sin(x * frequency + offset) * amplitude + jitter;
+				if (x === 0) {
+					mctx.moveTo(x, y);
+				} else {
+					mctx.lineTo(x, y);
+				}
+			}
+			mctx.stroke();
+			mctx.shadowBlur = 0; // reset
+		}
+
+		function animateMenu() {
+			if (menuActive) {
+				mctx.clearRect(0, 0, menuCanvas.width, menuCanvas.height);
+				
+				const isLight = document.body.classList.contains('light-theme');
+				const themeColor1 = isLight ? 'rgba(0, 132, 255, 0.15)' : 'rgba(220, 20, 60, 0.18)';
+				const themeColor2 = isLight ? 'rgba(0, 150, 255, 0.08)' : 'rgba(220, 20, 60, 0.08)';
+
+				// Draw 2 glowing electric sine waves sweeping horizontally
+				waveOffset += 0.05;
+				drawOscilloscopeWave(menuCanvas.height * 0.15, 0.005, waveOffset, themeColor1, 1.2);
+				drawOscilloscopeWave(menuCanvas.height * 0.22, 0.008, -waveOffset * 0.7, themeColor2, 0.8);
+
+				// Update and draw horizontal sparks traveling along the grid
+				menuSparks.forEach(spark => {
+					spark.update();
+					spark.draw();
+				});
+				
+				// Draw grid lightning spark discharges on grid line intersections (20px grid)
+				if (Math.random() > 0.94) {
+					const gridX = Math.floor(Math.random() * (menuCanvas.width / 20)) * 20;
+					const gridY = Math.floor(Math.random() * (menuCanvas.height / 20)) * 20;
+					
+					mctx.beginPath();
+					mctx.strokeStyle = isLight ? 'rgba(0, 132, 255, 0.6)' : 'rgba(220, 20, 60, 0.8)';
+					mctx.lineWidth = 1;
+					mctx.moveTo(gridX, gridY);
+					
+					// Draw tiny lightning arc discharge
+					let currX = gridX;
+					let currY = gridY;
+					for (let i = 0; i < 3; i++) {
+						currX += (Math.random() - 0.5) * 15;
+						currY += (Math.random() - 0.5) * 15;
+						mctx.lineTo(currX, currY);
+					}
+					mctx.stroke();
+				}
+			}
+			requestAnimationFrame(animateMenu);
+		}
+		animateMenu();
 	</script>
 </body>
 
