@@ -9,6 +9,8 @@
 </head>
 
 <body>
+	<canvas id="particle-canvas"></canvas>
+	<div class="bg-gradient"></div>
 	<!--Hello there!!!!!!!!!!!!!-->
 	<!--Header section-->
 	<section id="header">
@@ -20,6 +22,24 @@
 					</a>
 				</div>
 				<div class="nav-list">
+					<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+						<svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="5"></circle>
+							<line x1="12" y1="1" x2="12" y2="3"></line>
+							<line x1="12" y1="21" x2="12" y2="23"></line>
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+							<line x1="1" y1="12" x2="3" y2="12"></line>
+							<line x1="21" y1="12" x2="23" y2="12"></line>
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+						</svg>
+						<svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+						</svg>
+					</button>
 					<div class="hamburger">
 						<div class="bar"></div>
 					</div>
@@ -84,7 +104,8 @@
 					<p>for power factor correction and efficiency gains.</p>
 				</div>
 				<div class="service-item">
-					<div class="icon"> <img src="https://img.icons8.com/cute-clipart/64/maintenance.png" alt="MCC Panels" />
+					<div class="icon"> <img src="https://img.icons8.com/cute-clipart/64/maintenance.png"
+							alt="MCC Panels" />
 					</div>
 					<h2>MCC Panels</h2>
 					<p>motor control centers for centralized motor management.</p>
@@ -346,36 +367,36 @@
 				<p>Skilled structure for scalable electrification projects</p>
 			</div>
 			<div class="workforce-details">
-				<div class="workforce-grid">
-					<div class="workforce-card">
+				<div class="workforce-single-card">
+					<div class="workforce-item">
 						<div class="count">1</div>
 						<div class="role">Director</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">2</div>
 						<div class="role">Project Managers</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">3</div>
 						<div class="role">Engineers</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">5</div>
 						<div class="role">Electrical Site Supervisors</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">16</div>
 						<div class="role">Skilled Electricians & Fabricators</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">22-24</div>
 						<div class="role">Semi-Skilled Electricians</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">4</div>
 						<div class="role">Store / Safety Supervisors</div>
 					</div>
-					<div class="workforce-card">
+					<div class="workforce-item">
 						<div class="count">50-60</div>
 						<div class="role">Additional Labourers <span class="note">(as required)</span></div>
 					</div>
@@ -389,32 +410,40 @@
 
 	<section id="contact">
 		<div class="contact container">
-			<div>
-				<h1 class="section-title">Contact <span>info</span></h1>
-			</div>
-			<div class='contact-items'>
-				<div class="contact-item">
-					<div class="icon"><img width="50" height="50" src="https://img.icons8.com/ios/50/apple-phone.png"
-							alt="apple-phone" /></div>
-					<div class="contact-info">
-						<h1>Phone</h1>
-						<h2>+91 9552215226</h2>
-					</div>
+			<div class="contact-wrapper">
+				<div class="contact-left">
+					<h1 class="section-title">Contact <span>Info</span></h1>
+					<p class="contact-sub">Have a project in mind or need expert electrical contracting? Reach out to us and our team will get back to you promptly.</p>
 				</div>
-				<div class="contact-item">
-					<div class="icon"><img width="50" height="50"
-							src="https://img.icons8.com/pastel-glyph/64/new-post--v1.png" alt="new-post--v1" /></div>
-					<div class="contact-info">
-						<h1>Email</h1>
-						<h2>voltechsolution20@gmail.com</h2>
-					</div>
-				</div>
-				<div class="contact-item">
-					<div class="icon"><img width="50" height="50"
-							src="https://img.icons8.com/ios-filled/50/address--v1.png" alt="address--v1" /></div>
-					<div class="contact-info">
-						<h1>Address</h1>
-						<h2>3rd Floor, NMK Creation, Near Narmada Garden, Pimple-Gurav, Pune 411061</h2>
+				<div class="contact-right">
+					<div class="contact-card">
+						<div class="contact-row">
+							<div class="icon">
+								<img width="30" height="30" src="https://img.icons8.com/ios/50/apple-phone.png" alt="phone" />
+							</div>
+							<div class="info">
+								<span class="label">Phone</span>
+								<a href="tel:+919552215226" class="val">+91 9552215226</a>
+							</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon">
+								<img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/new-post--v1.png" alt="email" />
+							</div>
+							<div class="info">
+								<span class="label">Email</span>
+								<a href="mailto:voltechsolution20@gmail.com" class="val">voltechsolution20@gmail.com</a>
+							</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon">
+								<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/address--v1.png" alt="address" />
+							</div>
+							<div class="info">
+								<span class="label">Address</span>
+								<span class="val">3rd Floor, NMK Creation, Near Narmada Garden, Pimple-Gurav, Pune 411061</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -475,10 +504,10 @@
 
 		document.addEventListener('scroll', () => {
 			var scroll_position = window.scrollY;
-			if (scroll_position > 250) {
-				header.style.backgroundColor = '#29323c';
+			if (scroll_position > 100) {
+				header.classList.add('scrolled');
 			} else {
-				header.style.backgroundColor = 'transparent';
+				header.classList.remove('scrolled');
 			}
 		});
 
@@ -488,6 +517,118 @@
 				mobile_menu.classList.remove('active');
 			});
 		});
+
+		// Theme Toggle Logic
+		const themeToggleBtn = document.getElementById('theme-toggle');
+		const savedTheme = localStorage.getItem('theme') || 'dark';
+		if (savedTheme === 'light') {
+			document.body.classList.add('light-theme');
+		}
+
+		themeToggleBtn.addEventListener('click', () => {
+			document.body.classList.toggle('light-theme');
+			const currentTheme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+			localStorage.setItem('theme', currentTheme);
+		});
+
+		// Minimal Electric Particle Animation
+		const canvas = document.getElementById('particle-canvas');
+		const ctx = canvas.getContext('2d');
+		let particles = [];
+
+		function resizeCanvas() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		}
+		window.addEventListener('resize', resizeCanvas);
+		resizeCanvas();
+
+		class Particle {
+			constructor() {
+				this.x = Math.random() * canvas.width;
+				this.y = Math.random() * canvas.height;
+				this.vx = (Math.random() - 0.5) * 0.7; // slightly faster for electrical sparks
+				this.vy = (Math.random() - 0.5) * 0.7;
+				this.radius = Math.random() * 2 + 1;
+			}
+			update() {
+				this.x += this.vx;
+				this.y += this.vy;
+				if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+				if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+			}
+			draw() {
+				const isLight = document.body.classList.contains('light-theme');
+				ctx.beginPath();
+				ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+
+				// Electric blue in light mode, electric crimson in dark mode
+				ctx.fillStyle = isLight
+					? 'rgba(0, 150, 255, 0.5)'
+					: 'rgba(255, 0, 85, 0.5)';
+				ctx.fill();
+			}
+		}
+
+		function initParticles() {
+			const count = Math.min(60, Math.floor((canvas.width * canvas.height) / 20000));
+			particles = [];
+			for (let i = 0; i < count; i++) {
+				particles.push(new Particle());
+			}
+		}
+		initParticles();
+		window.addEventListener('resize', initParticles);
+
+		function animateParticles() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			particles.forEach(p => {
+				p.update();
+				p.draw();
+			});
+			// Connect nearby particles with jagged electrical arcs
+			for (let i = 0; i < particles.length; i++) {
+				for (let j = i + 1; j < particles.length; j++) {
+					const dx = particles[j].x - particles[i].x;
+					const dy = particles[j].y - particles[i].y;
+					const dist = Math.sqrt(dx * dx + dy * dy);
+					if (dist < 130) {
+						ctx.beginPath();
+
+						// Draw a jagged lightning-like line
+						const segments = 4;
+						const isLight = document.body.classList.contains('light-theme');
+						ctx.moveTo(particles[i].x, particles[i].y);
+
+						for (let k = 1; k < segments; k++) {
+							const t = k / segments;
+							const tx = particles[i].x + dx * t;
+							const ty = particles[i].y + dy * t;
+
+							// Normal perpendicular vector for electric jitter
+							const nx = -dy / dist;
+							const ny = dx / dist;
+
+							const jitter = (Math.random() - 0.5) * 6; // lightning arc displacement
+							ctx.lineTo(tx + nx * jitter, ty + ny * jitter);
+						}
+
+						ctx.lineTo(particles[j].x, particles[j].y);
+
+						const alpha = 0.25 * (1 - dist / 130);
+						// Electric blue lines in light theme, electric crimson lines in dark theme
+						ctx.strokeStyle = isLight
+							? `rgba(0, 132, 255, ${alpha})`
+							: `rgba(255, 0, 85, ${alpha * 1.5})`;
+
+						ctx.lineWidth = Math.random() > 0.85 ? 1.5 : 0.6; // electric shimmer
+						ctx.stroke();
+					}
+				}
+			}
+			requestAnimationFrame(animateParticles);
+		}
+		animateParticles();
 	</script>
 </body>
 
