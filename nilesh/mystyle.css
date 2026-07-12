@@ -127,7 +127,7 @@ p {
 
 .section-title {
 	font-size: 4rem;
-	font-weight: 300;
+	font-weight: 400;
 	color: var(--title-color);
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -161,6 +161,10 @@ p {
 .cta:hover {
 	color: white;
 	background-color: var(--accent-color);
+	box-shadow: 0 0 25px var(--accent-color), inset 0 0 10px rgba(255, 255, 255, 0.4);
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+	transform: scale(1.05);
+	border-color: var(--accent-color);
 }
 
 .brand h1 {
@@ -1059,6 +1063,10 @@ body.light-theme #contact .contact-row {
 	gap: 15px;
 }
 
+#header .menu-trigger-label {
+	display: none;
+}
+
 .theme-toggle-btn {
 	background: transparent;
 	border: 1px solid var(--btn-border);
@@ -1104,6 +1112,7 @@ body.light-theme #contact .contact-row {
 	align-items: center;
 	z-index: 1;
 	overflow-x: hidden;
+	overflow-y: auto;
 	transition: .5s ease left;
 }
 
@@ -1391,11 +1400,10 @@ body.light-theme #workforce .workforce-item {
 
 	/* End of Coordination */
 
-	/* Installation */
 	#installation .installation-details {
 		flex-direction: row;
 		align-items: stretch;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: 30px;
 	}
@@ -1494,99 +1502,169 @@ body.light-theme #workforce .workforce-item {
 		align-items: center;
 		gap: 60px;
 	}
-	
+
 	#contact .contact-left {
 		text-align: left;
 		flex: 1;
 	}
-	
+
 	#contact .contact-left h1.section-title {
 		text-align: left;
 	}
-	
+
 	#contact .contact-sub {
 		margin: 0;
 	}
+
 	/* End of Contact */
 }
 
 /* End of Media query for tablet */
 
 /* Media query for Laptop / Desktop header menu transition */
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1250px) {
 
 	/* Header Tablet/Desktop Overrides */
 	#header .brand h1 {
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 
 	#header .hamburger {
 		display: none;
 	}
 
-	#header .nav-list ul {
-		position: initial;
+	#header .menu-trigger-label {
 		display: flex;
-		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-secondary);
+		margin-right: 15px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	#header:hover .menu-trigger-label {
+		color: var(--accent-color);
+		transform: rotate(90deg);
+	}
+
+	#header .menu-icon-svg {
+		display: block;
+		width: 24px;
+		height: 24px;
+	}
+
+	/* Hidden dropdown menu panel */
+	#header .nav-list ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100vw;
+		background-color: var(--header-scrolled-bg);
+		background-image: linear-gradient(90deg, rgba(220, 20, 60, 0.03) 1px, transparent 1px),
+			linear-gradient(0deg, rgba(220, 20, 60, 0.03) 1px, transparent 1px);
+		background-size: 20px 20px;
+		border-bottom: 1px solid var(--header-border);
+		backdrop-filter: blur(20px);
+		display: grid !important;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 40px 10%;
+		gap: 20px;
+		box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.25);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-20px);
+		transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+		z-index: -1;
 		height: auto;
-		width: auto;
-		background-color: transparent;
-		transition: none;
+		list-style: none;
+	}
+
+	/* Show dropdown menu panel on hover of menu button or the menu itself */
+	#header .menu-trigger-label:hover ~ ul,
+	#header .nav-list ul:hover {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
 	}
 
 	#header .nav-list ul li {
-		display: inline-block;
+		display: block;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	#header #menu-particle-canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 0;
 	}
 
 	#header .nav-list ul a {
 		font-size: 1.4rem;
-		padding: 10px 8px;
+		font-weight: 600;
+		letter-spacing: .15rem;
+		text-decoration: none;
+		color: var(--title-color);
+		text-transform: uppercase;
+		padding: 15px 25px;
+		display: block;
+		border-radius: 30px;
+		background-color: rgba(212, 175, 55, 0.02);
+		border: 1.5px solid rgba(212, 175, 55, 0.25);
+		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		text-align: center;
 		position: relative;
+		overflow: hidden;
 	}
 
-	#header .nav-list ul a::after {
+	body.light-theme #header .nav-list ul a {
+		background-color: rgba(220, 20, 60, 0.02);
+		border-color: rgba(220, 20, 60, 0.15);
+	}
+
+
+
+	#header .nav-list ul a:hover {
+		color: var(--accent-color);
+		border-color: var(--accent-color);
+		background-color: rgba(220, 20, 60, 0.05);
+		transform: scale(1.05);
+		box-shadow: 0 0 15px rgba(220, 20, 60, 0.4), inset 0 0 8px rgba(220, 20, 60, 0.2);
+		text-shadow: 0 0 5px rgba(220, 20, 60, 0.3);
+		animation: menu-electric-pulse 1.5s infinite alternate, electric-flicker 2s infinite;
+	}
+
+	#header .nav-list ul a::before {
 		content: '';
 		position: absolute;
-		bottom: 5px;
-		left: 8px;
-		width: calc(100% - 16px);
+		bottom: 0;
+		left: -100%;
+		width: 100%;
 		height: 2px;
-		background-color: crimson;
-		transform: scaleX(0);
-		transition: .3s ease transform, .3s ease opacity;
-		transform-origin: center;
-		opacity: 0;
+		background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+		transition: none;
 	}
 
-	#header .nav-list ul li:hover a::after {
-		transform: scaleX(1);
-		opacity: 1;
+	#header .nav-list ul a:hover::before {
+		animation: border-spark 1.5s infinite linear;
 	}
 
 	#header .nav-list {
-		flex-direction: row-reverse;
+		flex-direction: row;
+		align-items: center;
+		gap: 15px;
 	}
 
-	/* End Header Tablet/Desktop Overrides */
 }
 
 /* Media query for Desktop */
-
-@media only screen and (min-width:1200px) {
-
-	#header .brand h1 {
-		font-size: 2.5rem;
-	}
-
-	#header .nav-list ul a {
-		font-size: 1.8rem;
-		padding: 10px 15px;
-	}
-
-	#header .nav-list ul a::after {
-		left: 15px;
-		width: calc(100% - 30px);
-	}
+@media only screen and (min-width:1350px) {
 
 	#services .service-header {
 		width: 1100px;
@@ -1597,8 +1675,6 @@ body.light-theme #workforce .workforce-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
-
-
 }
 
 /* End of Media query for Desktop */
@@ -1856,4 +1932,534 @@ body.deprecated-light-theme #footer p {
 
 body.deprecated-light-theme #footer .brand h1 {
 	color: #1e293b;
+}
+
+/* ==========================================
+   CLIENTS SECTION
+   ========================================== */
+#clients {
+	background-color: transparent;
+}
+
+#clients .clients {
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#clients .clients-header {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#clients .clients-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 25px;
+	width: 100%;
+	padding: 0 20px;
+}
+
+#clients .client-sector-card {
+	background-color: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#clients .client-sector-card:hover {
+	transform: translateY(-5px);
+	border-color: rgba(220, 20, 60, 0.3);
+	box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+#clients .client-sector-card .sector-icon {
+	width: 60px;
+	height: 60px;
+	background-color: var(--icon-bg);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+#clients .client-sector-card:hover .sector-icon {
+	background-color: var(--icon-bg-hover);
+}
+
+#clients .client-sector-card .sector-icon img {
+	filter: brightness(0) invert(1);
+}
+
+body.light-theme #clients .client-sector-card .sector-icon img {
+	filter: none;
+}
+
+#clients .client-sector-card h2 {
+	font-size: 2.2rem;
+	color: var(--title-color);
+	margin-bottom: 15px;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+}
+
+#clients .client-sector-card p {
+	font-size: 1.5rem;
+	color: var(--text-secondary);
+	line-height: 2.4rem;
+}
+
+#clients .client-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+}
+
+#clients .client-tag {
+	font-size: 1.3rem;
+	color: var(--text-primary);
+	background-color: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--card-border);
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+body.light-theme #clients .client-tag {
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+#clients .client-tag:hover {
+	background-color: var(--card-bg-hover);
+	border-color: var(--accent-color);
+	transform: scale(1.03);
+}
+
+#clients .client-tag .badge {
+	font-size: 1rem;
+	text-transform: uppercase;
+	background-color: var(--accent-color);
+	color: white;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-weight: 700;
+	letter-spacing: 0.05rem;
+}
+
+@media only screen and (min-width: 768px) {
+	#clients .clients-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#clients .client-sector-card.full-width {
+		grid-column: span 2;
+	}
+}
+
+/* ==========================================
+   COMMITMENT SECTION
+   ========================================== */
+#commitment {
+	background-color: transparent;
+}
+
+#commitment .commitment {
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#commitment .commitment-header {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#commitment .commitment-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	justify-content: center;
+	width: 100%;
+	padding: 0 20px;
+}
+
+#commitment .commitment-card {
+	flex: 1 1 calc(33.333% - 25px);
+	min-width: 280px;
+	max-width: 380px;
+	background-color: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#commitment .commitment-card:hover {
+	transform: translateY(-5px);
+	border-color: rgba(220, 20, 60, 0.3);
+	box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+#commitment .commitment-card .icon {
+	width: 60px;
+	height: 60px;
+	background-color: var(--icon-bg);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+#commitment .commitment-card:hover .icon {
+	background-color: var(--icon-bg-hover);
+}
+
+#commitment .commitment-card .icon img {
+	filter: brightness(0) invert(1);
+}
+
+body.light-theme #commitment .commitment-card .icon img {
+	filter: none;
+}
+
+#commitment .commitment-card h2 {
+	font-size: 2rem;
+	color: var(--title-color);
+	margin-bottom: 12px;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+}
+
+#commitment .commitment-card p {
+	font-size: 1.4rem;
+	color: var(--text-secondary);
+	line-height: 2.2rem;
+}
+
+/* ==========================================
+   EXTERIOR LIGHTING SECTION
+   ========================================== */
+#exterior-lighting {
+	background-color: transparent;
+}
+
+#exterior-lighting .exterior-lighting {
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#exterior-lighting .lighting-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+#exterior-lighting .lighting-left {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#exterior-lighting .lighting-left h1.section-title {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+#exterior-lighting .lighting-sub {
+	font-size: 1.6rem;
+	color: var(--text-secondary);
+	line-height: 2.6rem;
+	margin-bottom: 30px;
+}
+
+#exterior-lighting .outcome-card {
+	background-color: rgba(220, 20, 60, 0.08);
+	border: 1px solid rgba(220, 20, 60, 0.2);
+	border-left: 4px solid var(--accent-color);
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+#exterior-lighting .outcome-icon {
+	width: 45px;
+	height: 45px;
+	background-color: rgba(220, 20, 60, 0.15);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+#exterior-lighting .outcome-icon img {
+	filter: brightness(0) invert(1);
+}
+
+body.light-theme #exterior-lighting .outcome-icon img {
+	filter: none;
+}
+
+#exterior-lighting .outcome-text span {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	color: var(--accent-color);
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+#exterior-lighting .outcome-text h3 {
+	font-size: 1.5rem;
+	color: var(--title-color);
+	margin-top: 3px;
+	font-weight: 500;
+}
+
+#exterior-lighting .lighting-right {
+	flex: 1.2;
+	width: 100%;
+}
+
+#exterior-lighting .lighting-features {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#exterior-lighting .lighting-feature {
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+	background-color: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	transition: all 0.3s ease;
+}
+
+#exterior-lighting .lighting-feature:hover {
+	transform: translateX(5px);
+	border-color: rgba(220, 20, 60, 0.3);
+}
+
+#exterior-lighting .feature-num {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--accent-color);
+	opacity: 0.7;
+}
+
+#exterior-lighting .feature-info h3 {
+	font-size: 1.8rem;
+	color: var(--title-color);
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+#exterior-lighting .feature-info p {
+	font-size: 1.4rem;
+	color: var(--text-secondary);
+	line-height: 2.2rem;
+}
+
+/* ==========================================
+   SOLAR SECTION
+   ========================================== */
+#solar {
+	background-color: transparent;
+}
+
+#solar .solar {
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#solar .solar-header {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#solar .solar-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	justify-content: center;
+	width: 100%;
+	padding: 0 20px;
+}
+
+#solar .solar-card {
+	flex: 1 1 calc(33.333% - 25px);
+	min-width: 280px;
+	max-width: 380px;
+	background-color: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#solar .solar-card:hover {
+	transform: translateY(-5px);
+	border-color: rgba(220, 20, 60, 0.3);
+	box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+#solar .solar-card .icon {
+	width: 60px;
+	height: 60px;
+	background-color: var(--icon-bg);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+#solar .solar-card:hover .icon {
+	background-color: var(--icon-bg-hover);
+}
+
+#solar .solar-card .icon img {
+	filter: brightness(0) invert(1);
+}
+
+body.light-theme #solar .solar-card .icon img {
+	filter: none;
+}
+
+#solar .solar-card h2 {
+	font-size: 2rem;
+	color: var(--title-color);
+	margin-bottom: 12px;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+}
+
+#solar .solar-card p {
+	font-size: 1.4rem;
+	color: var(--text-secondary);
+	line-height: 2.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	#exterior-lighting .lighting-wrapper {
+		flex-direction: row;
+		align-items: stretch;
+		gap: 60px;
+	}
+}
+
+/* Keyframes for Nav Menu Electric Animations */
+@keyframes menu-electric-pulse {
+	0% {
+		box-shadow: 0 0 10px rgba(220, 20, 60, 0.3), inset 0 0 5px rgba(220, 20, 60, 0.1);
+	}
+
+	100% {
+		box-shadow: 0 0 20px rgba(220, 20, 60, 0.6), inset 0 0 10px rgba(220, 20, 60, 0.3);
+	}
+}
+
+@keyframes border-spark {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 100%;
+	}
+}
+
+/* Global Electric Card Hover Glows */
+#services .service-item:hover,
+#coordination .coordination-item:hover,
+#installation .installation-item:hover,
+#clients .client-sector-card:hover,
+#solar .solar-card:hover,
+#commitment .commitment-card:hover,
+#exterior-lighting .lighting-feature:hover,
+#workforce .workforce-item:hover {
+	border-color: var(--accent-color) !important;
+	box-shadow: 0 0 20px rgba(220, 20, 60, 0.5), inset 0 0 10px rgba(220, 20, 60, 0.25) !important;
+}
+
+#projects .project-item:hover .project-img {
+	box-shadow: 0 0 25px var(--accent-color) !important;
+	border: 1px solid var(--accent-color);
+}
+
+@keyframes electric-flicker {
+
+	0%,
+	19%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+		opacity: 1;
+		border-color: var(--accent-color);
+		box-shadow: 0 0 15px rgba(220, 20, 60, 0.4), inset 0 0 8px rgba(220, 20, 60, 0.2);
+		text-shadow: 0 0 5px rgba(220, 20, 60, 0.3);
+	}
+
+	20%,
+	24%,
+	55% {
+		opacity: 0.8;
+		border-color: rgba(220, 20, 60, 0.4);
+		box-shadow: 0 0 5px rgba(220, 20, 60, 0.1);
+		text-shadow: none;
+	}
 }
