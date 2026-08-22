@@ -1,76 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Mali General Stores</title>
+  <title>Vishwakarma Jewellers (विश्वकर्मा ज्वेलर्स)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Vishwakarma Jewellers, Hebbal Nool - We make and supply hallmark gold and silver jewellery as per order.">
+
+  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="vj_style.css">
+
+  <!-- JavaScript Files -->
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/import.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="./js/vcf_download.js"></script>
 </head>
+
 <body>
-<div class="card-container">
-	<div class="upper-container">
-		<div class="image-container">
-			<img src="./img/logo.jpeg" />
-		</div>
-	</div>
-	<div class="lower-container">
-		<div>
-			<h3>Mali General Stores</h3>
-			<h5>Proprietor: Laxman Mali</h5>
-			<p>M.No.: +91-1234567890</p>
-		</div>
-		<div >
-			<div class="bottom-margin"><b>Address :</b>M G Market (Mahatma Gandhi Market) Athani.</div>
-		</div>
-		<div class="bottom-margin">
-			<a href="#" class="btn" data-toggle="modal" data-target="#myModal">CONTACT</a>
-		</div>
-		<div class="create-vcard">
-			<a href="#" data-toggle="modal" data-target="#myModal2">Click here to create your own vcard</a>
-		</div>
-	</div>
-</div>
-<!-- Modals -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Contact Mali General Stores</h4>
+
+  <div class="vcard-wrapper">
+    <!-- Language Switch Bar -->
+    <div class="lang-switch-bar">
+      <button id="lang-switch-btn" onclick="toggleLanguage()" class="lang-btn">
+        <i class="fa fa-globe"></i> <span id="lang-btn-text">मराठी</span>
+      </button>
+    </div>
+
+    <!-- Recreated Instagram Card Banner -->
+    <div class="banner-card">
+      <div class="invocations trans"
+        data-en="|| Shree Ramlingeshwar Prasanna || Shree Kalikadevi Prasanna || Shree Mallikarjun Prasanna ||"
+        data-mr="|| श्री रामलिंगेश्वर प्रसन्न || श्री कालिकादेवी प्रसन्न || श्री मल्लिकार्जुन प्रसन्न ||">
+        || Shree Ramlingeshwar Prasanna || Shree Kalikadevi Prasanna || Shree Mallikarjun Prasanna ||
+      </div>
+      <div class="hare-krishna trans" data-en="|| Hare Krishna ||" data-mr="|| हरे कृष्ण ||">
+        || Hare Krishna ||
+      </div>
+
+      <div class="brand-header-grid">
+        <div class="logo-monogram">
+          <span>VJ</span>
         </div>
-        <div class="modal-body">
-          <a class="whats-app" href="https://api.whatsapp.com/send?phone=911234567890&text=Hello,%20" target="_blank"><i class="fa fa-whatsapp" style="font-size:36px;color: green">Whatsapp</i></a><br><br>
-          <a href="tel:12345667890"><i class="fa fa-phone" style="font-size:36px;color: blue">CALL</i></a>
+        <div>
+          <h1 class="brand-title trans" data-en="Vishwakarma" data-mr="विश्वकर्मा">Vishwakarma</h1>
+          <div class="brand-subtitle trans" data-en="Jewellers" data-mr="ज्वेलर्स">Jewellers</div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+
+      <div class="tagline trans" data-en="Let's strengthen our relationship with each other.."
+        data-mr="एकमेकांशी असलेलं नातं अजुन घट्ट करूयात..">
+        Let's strengthen our relationship with each other..
+      </div>
+
+      <div class="service-desc trans" data-en="Hallmark Gold & Silver jewelry available ready-made and made-to-order."
+        data-mr="आमच्याकडे सोने - चांदीचे हॉलमार्कचे दागिने तयार व ऑर्डर प्रमाणे तयार करून मिळतील.">
+        Hallmark Gold & Silver jewelry available ready-made and made-to-order.
+      </div>
+
+      <div class="proprietor-bar">
+        <span class="trans" data-en="Proprietor: " data-mr="प्रोप्रा : ">Proprietor: </span><span>Vikas Sutar</span> |
+        <span class="trans" data-en="Mob: " data-mr="मोबा : ">Mob: </span><span>9022650723</span>
+      </div>
+
+      <div>
+        <div class="address-pill trans"
+          data-en="&lt;i class='fa fa-map-marker'&gt;&lt;/i&gt; Hebbal Kasaba Nool, Tal. Gadhinglaj, Dist. Kolhapur"
+          data-mr="&lt;i class='fa fa-map-marker'&gt;&lt;/i&gt; मु.पो.हेब्बाळ क || नूल ,ता.गडहिंग्लज,जि.कोल्हापूर .">
+          <i class="fa fa-map-marker"></i> Hebbal Kasaba Nool, Tal. Gadhinglaj, Dist. Kolhapur
+        </div>
+      </div>
+
+      <div class="banner-bottom-ornament"></div>
+    </div>
+
+    <!-- Interactive Quick Actions Bar -->
+    <div class="quick-actions">
+      <a href="tel:9022650723" class="action-btn call" id="btn-call">
+        <div class="action-icon">
+          <i class="fa fa-phone"></i>
+        </div>
+        <span class="action-label trans" data-en="Call Now" data-mr="फोन करा">Call Now</span>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=919022650723&text=Hello%20Vikas,%20I%20am%20contacting%20you%20from%20your%20Digital%20Card."
+        target="_blank" class="action-btn whatsapp" id="btn-whatsapp">
+        <div class="action-icon">
+          <i class="fa fa-whatsapp"></i>
+        </div>
+        <span class="action-label trans" data-en="WhatsApp" data-mr="व्हॉट्सॲप">WhatsApp</span>
+      </a>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Hebbal+Kasaba+Nool+Gadhinglaj+Kolhapur" target="_blank"
+        class="action-btn direction" id="btn-direction">
+        <div class="action-icon">
+          <i class="fa fa-map-marker"></i>
+        </div>
+        <span class="action-label trans" data-en="Direction" data-mr="पत्ता">Direction</span>
+      </a>
+
+      <a href="https://www.instagram.com/vj.goldhouse/" target="_blank" class="action-btn instagram" id="btn-instagram">
+        <div class="action-icon">
+          <i class="fa fa-instagram"></i>
+        </div>
+        <span class="action-label trans" data-en="Instagram" data-mr="इंस्टाग्राम">Instagram</span>
+      </a>
+
+      <a href="javascript:void(0)" onclick="downloadVCF()" class="action-btn save" id="btn-save">
+        <div class="action-icon">
+          <i class="fa fa-download"></i>
+        </div>
+        <span class="action-label trans" data-en="Save Contact" data-mr="संपर्क जतन">Save Contact</span>
+      </a>
+    </div>
+
+    <!-- Jewelry Showcase Gallery -->
+    <div class="gallery-section">
+      <h3 class="section-title trans" data-en="&lt;i class='fa fa-diamond'&gt;&lt;/i&gt; Our Gallery"
+        data-mr="&lt;i class='fa fa-diamond'&gt;&lt;/i&gt; आमची गॅलरी">
+        <i class="fa fa-diamond"></i> Our Gallery
+      </h3>
+      <div class="gallery-grid">
+        <!-- Gold Jewelry Item -->
+        <div class="gallery-item" data-toggle="modal" data-target="#myModal"
+          onclick="setModalContact('Gold Jewelry Inquiry', 'सोने दागिने चौकशी')">
+          <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80"
+            alt="Gold Jewelry" />
+          <div class="gallery-overlay">
+            <span class="trans" data-en="Gold Collection" data-mr="सोने कलेक्शन">Gold Collection</span>
+          </div>
+        </div>
+
+        <!-- Silver Jewelry Item -->
+        <div class="gallery-item" data-toggle="modal" data-target="#myModal"
+          onclick="setModalContact('Silver Jewelry Inquiry', 'चांदी दागिने चौकशी')">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+            alt="Silver Jewelry" />
+          <div class="gallery-overlay">
+            <span class="trans" data-en="Silver Collection" data-mr="चांदी कलेक्शन">Silver Collection</span>
+          </div>
         </div>
       </div>
     </div>
-</div>
-<div class="modal fade" id="myModal2" role="dialog">
+
+    <!-- Working Hours -->
+    <div class="details-section">
+      <div class="detail-card">
+        <h3 class="section-title trans" data-en="&lt;i class='fa fa-clock-o'&gt;&lt;/i&gt; Opening Hours"
+          data-mr="&lt;i class='fa fa-clock-o'&gt;&lt;/i&gt; उघडण्याच्या वेळा" style="margin-top: 0;">
+          <i class="fa fa-clock-o"></i> Opening Hours
+        </h3>
+        <ul class="hours-list">
+          <li class="hours-row">
+            <span class="day trans" data-en="Monday - Saturday" data-mr="सोमवार - शनिवार">Monday - Saturday</span>
+            <span class="time">10:00 AM - 08:30 PM</span>
+          </li>
+          <li class="hours-row">
+            <span class="day trans" data-en="Sunday" data-mr="रविवार">Sunday</span>
+            <span class="time trans" style="color: #ef4444;" data-en="Closed" data-mr="बंद">Closed</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Direct Contact CTA and Footer -->
+    <div class="footer-contact-box">
+      <button class="btn-contact trans" data-toggle="modal" data-target="#myModal"
+        onclick="setModalContact('General Inquiry', 'सामान्य चौकशी')"
+        data-en="&lt;i class='fa fa-envelope-o'&gt;&lt;/i&gt; Contact Us Now"
+        data-mr="&lt;i class='fa fa-envelope-o'&gt;&lt;/i&gt; त्वरित संपर्क साधा">
+        <i class="fa fa-envelope-o"></i> Contact Us Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Contact Shana Solutions for VCARD</h4>
+          <button type="button" class="close" data-dismiss="modal" style="color: white; opacity: 0.8;">&times;</button>
+          <h4 class="modal-title" id="modal-contact-title">Contact Vishwakarma Jewellers</h4>
         </div>
-        <div class="modal-body">
-          <a class="whats-app" href="https://api.whatsapp.com/send?phone=911234567890&text=Hello,%20Shana%20Solutions%20I%20texting%20here%20to%20enquire%20about%20VCARD." target="_blank"><i class="fa fa-whatsapp" style="font-size:36px;color: green">Whatsapps</i></a><br><br>
-          <a href="tel:1234567890"><i class="fa fa-phone" style="font-size:36px;color: blue">CALL</i></a>
+        <div class="modal-body modal-body-links">
+          <a class="m-whatsapp" id="whatsapp-modal-link"
+            href="https://api.whatsapp.com/send?phone=919022650723&text=Hello%20Vikas,%20I%20am%20contacting%20you%20from%20your%20Digital%20Card."
+            target="_blank">
+            <i class="fa fa-whatsapp" style="font-size:24px;"></i> Whatsapp
+          </a>
+          <a class="m-call" href="tel:9022650723">
+            <i class="fa fa-phone" style="font-size:24px;"></i> Call
+          </a>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"
+            style="background: rgba(255,255,255,0.1); color: white; border: none;">Close</button>
         </div>
       </div>
     </div>
-</div>
+  </div>
+
+  <script>
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const elements = document.querySelectorAll('.trans');
+      elements.forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+          el.innerHTML = text;
+        }
+      });
+
+      // Update button display text (shows alternate option)
+      const btnText = document.getElementById('lang-btn-text');
+      if (btnText) {
+        btnText.innerText = lang === 'en' ? 'मराठी' : 'English';
+      }
+
+      // Update Document Language attribute for accessibility/SEO
+      document.documentElement.setAttribute('lang', lang);
+
+      // Save to local storage for persistence
+      localStorage.setItem('vcard-lang', lang);
+    }
+
+    function toggleLanguage() {
+      setLanguage(currentLang === 'en' ? 'mr' : 'en');
+    }
+
+    function setModalContact(subjectEn, subjectMr) {
+      const lang = localStorage.getItem('vcard-lang') || 'en';
+      const subject = lang === 'en' ? subjectEn : subjectMr;
+      const greetText = lang === 'en' ?
+        `Hello Vikas, I am contacting you from your Digital Card regarding "${subject}".` :
+        `नमस्कार विकासजी, मी आपल्या डिजिटल कार्डवरून "${subject}" संदर्भात विचारणा करत आहे.`;
+      const encodedText = encodeURIComponent(greetText);
+      const whatsappLink = `https://api.whatsapp.com/send?phone=919022650723&text=${encodedText}`;
+      document.getElementById('whatsapp-modal-link').setAttribute('href', whatsappLink);
+
+      const modalTitle = document.getElementById('modal-contact-title');
+      if (modalTitle) {
+        modalTitle.innerText = lang === 'en' ? `Contact for ${subject}` : `${subject} संदर्भात संपर्क साधा`;
+      }
+    }
+
+    // Initialize page language on DOM load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('vcard-lang') || 'en';
+      setLanguage(savedLang);
+    });
+  </script>
+
 </body>
+
 </html>
