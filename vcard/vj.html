@@ -17,7 +17,7 @@
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/import.js"></script>
-  <script type="text/javascript" src="./js/vcf_download.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -109,11 +109,11 @@
         <span class="action-label trans" data-en="Instagram" data-mr="इंस्टाग्राम">Instagram</span>
       </a>
 
-      <a href="javascript:void(0)" onclick="downloadVCF()" class="action-btn save" id="btn-save">
+      <a href="javascript:void(0)" onclick="downloadCardImage()" class="action-btn save" id="btn-save">
         <div class="action-icon">
-          <i class="fa fa-download"></i>
+          <i class="fa fa-picture-o"></i>
         </div>
-        <span class="action-label trans" data-en="Save Contact" data-mr="संपर्क जतन">Save Contact</span>
+        <span class="action-label trans" data-en="Download Card" data-mr="कार्ड डाउनलोड">Download Card</span>
       </a>
     </div>
 
@@ -247,6 +247,30 @@
       if (modalTitle) {
         modalTitle.innerText = lang === 'en' ? `Contact for ${subject}` : `${subject} संदर्भात संपर्क साधा`;
       }
+    }
+
+    function downloadCardImage() {
+      const banner = document.querySelector('.banner-card');
+      if (!banner) return;
+      
+      // Use html2canvas to capture the banner-card and save it as PNG
+      html2canvas(banner, {
+        useCORS: true,
+        allowTaint: true,
+        scale: 3, // High-quality image
+        backgroundColor: '#020512' // Matches deep blue backdrop
+      }).then(canvas => {
+        const url = canvas.toDataURL('image/png');
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = 'Vishwakarma_Jewellers_Card.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }).catch(err => {
+        console.error("Error generating card image: ", err);
+      });
     }
 
     // Initialize page language on DOM load
